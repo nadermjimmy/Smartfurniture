@@ -1,0 +1,524 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Design every detail.\nBuilt for you.",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>If you can imagine it, we can build it — choose your materials, units, handles, and countertops and we'll craft your dream kitchen in our factory.</p>"
+          }
+        },
+        "link-1": {
+          "type": "link",
+          "settings": {
+            "text": "Express Kitchens",
+            "url": ""
+          }
+        },
+        "link-2": {
+          "type": "link",
+          "settings": {
+            "text": "Customizable Kitchens",
+            "url": ""
+          }
+        }
+      },
+      "block_order": ["heading-1", "richtext-1", "link-1", "link-2"],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image_size": "md",
+        "allow_transparent_header": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 35
+      }
+    },
+    "catalog-download": {
+      "type": "rich-text",
+      "blocks": {
+        "link-1": {
+          "type": "link",
+          "settings": {
+            "text": "Download Kitchen Catalog",
+            "url": ""
+          }
+        }
+      },
+      "block_order": ["link-1"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "content_width": "lg",
+        "text_position": "end"
+      }
+    },
+    "our-kitchens": {
+      "type": "media-grid",
+      "blocks": {
+        "img-1": {
+          "type": "image",
+          "settings": {
+            "stretch": true
+          }
+        },
+        "img-2": {
+          "type": "image",
+          "settings": {
+            "stretch": true
+          }
+        },
+        "img-3": {
+          "type": "image",
+          "settings": {
+            "stretch": true
+          }
+        },
+        "img-4": {
+          "type": "image",
+          "settings": {
+            "stretch": true
+          }
+        }
+      },
+      "block_order": ["img-1", "img-2", "img-3", "img-4"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "title": "Our Kitchens",
+        "heading_style": "h2",
+        "desktop_columns_count": 4,
+        "mobile_columns_count": 2,
+        "spacing": "sm"
+      }
+    },
+    "materials": {
+      "type": "multi-column",
+      "blocks": {
+        "mat-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Warm white",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "mat-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Natural oak",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "mat-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Teak walnut",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "mat-4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Concrete",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "mat-5": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Sand beige",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "mat-6": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Forest green",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "mat-7": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Forest gold",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        }
+      },
+      "block_order": ["mat-1", "mat-2", "mat-3", "mat-4", "mat-5", "mat-6", "mat-7"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 7,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "sm",
+        "title": "Build your kitchen, your way.",
+        "heading_style": "h2",
+        "subheading": "Materials"
+      }
+    },
+    "units": {
+      "type": "multi-column",
+      "blocks": {
+        "unit-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Tall units",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "unit-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Base units",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "unit-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Corner island",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "unit-4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Base drawers",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "unit-5": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Corner window",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "unit-6": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Corner window",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        }
+      },
+      "block_order": ["unit-1", "unit-2", "unit-3", "unit-4", "unit-5", "unit-6"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 6,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "sm",
+        "subheading": "Units"
+      }
+    },
+    "handles": {
+      "type": "multi-column",
+      "blocks": {
+        "handle-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Waterfront",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "handle-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Metro shell",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "handle-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Gold Y-bar",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "handle-4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Round knob",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "handle-5": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Handleless",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        }
+      },
+      "block_order": ["handle-1", "handle-2", "handle-3", "handle-4", "handle-5"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 6,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "sm",
+        "subheading": "Handles"
+      }
+    },
+    "tops": {
+      "type": "multi-column",
+      "blocks": {
+        "top-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Calacatta white",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "top-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Pearl gloss",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "top-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Galaxy gold",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "top-4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Arabé quartz",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "top-5": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Carrara white",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "top-6": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Sahel beige",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        }
+      },
+      "block_order": ["top-1", "top-2", "top-3", "top-4", "top-5", "top-6"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 6,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "sm",
+        "subheading": "Marble & Granite Tops"
+      }
+    },
+    "appliances": {
+      "type": "multi-column",
+      "blocks": {
+        "app-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Obsidian matte",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "app-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Dark glass",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "app-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Taupe grey",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "app-4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Rose quartz",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "app-5": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Forest green",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        },
+        "app-6": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Desert olive",
+            "heading_tag": "h6",
+            "content": ""
+          }
+        }
+      },
+      "block_order": ["app-1", "app-2", "app-3", "app-4", "app-5", "app-6"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 6,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "sm",
+        "subheading": "Appliances"
+      }
+    },
+    "real-kitchens": {
+      "type": "multiple-media-with-text",
+      "blocks": {
+        "img-1": {
+          "type": "image",
+          "settings": {}
+        },
+        "img-2": {
+          "type": "image",
+          "settings": {}
+        },
+        "img-3": {
+          "type": "image",
+          "settings": {}
+        },
+        "img-4": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": ["img-1", "img-2", "img-3", "img-4"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "title": "Real kitchens. Real homes.",
+        "heading_style": "h2",
+        "content": "<p>Every kitchen below was designed, built, and installed by Smart Furniture. No filters, no stock imagery — this is real craftsmanship in real Egyptian homes.</p>"
+      }
+    },
+    "three-steps": {
+      "type": "multi-column",
+      "blocks": {
+        "step-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "1. Site measurement",
+            "heading_tag": "h4",
+            "content": "<p>A Smart Furniture specialist visits your home to take precise measurements and discuss the space, style, and functionality you need.</p>"
+          }
+        },
+        "step-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "2. Design consultation",
+            "heading_tag": "h4",
+            "content": "<p>Our in-house designers create a full 3D kitchen layout. We walk you through every detail — materials, handles, countertops, and appliances.</p>"
+          }
+        },
+        "step-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "3. Production & installation",
+            "heading_tag": "h4",
+            "content": "<p>Your kitchen is manufactured in our factory and professionally installed in your home by our specialist team.</p>"
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 3,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "md",
+        "title": "Three steps to your dream kitchen.",
+        "heading_style": "h2"
+      }
+    },
+    "designer-meeting": {
+      "type": "contact",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "subheading": "Book a Meeting",
+        "title": "Request a designer meeting",
+        "heading_style": "h2",
+        "content": "<p>Fill out the form and our kitchen team will reach out to schedule a free consultation at your home or showroom.</p>"
+      }
+    },
+    "express-kitchens": {
+      "type": "featured-collection",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "title": "Ready-Made Kitchen Units",
+        "heading_style": "h2",
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "stack_products": true
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "catalog-download",
+    "our-kitchens",
+    "materials",
+    "units",
+    "handles",
+    "tops",
+    "appliances",
+    "real-kitchens",
+    "three-steps",
+    "designer-meeting",
+    "express-kitchens",
+    "main"
+  ]
+}
