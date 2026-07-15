@@ -489,7 +489,7 @@
       }
     },
     "express-kitchens": {
-      "type": "featured-collection",
+      "type": "featured-collections",
       "settings": {
         "color_scheme": "scheme-1",
         "title": "Ready-Made Kitchen Units",

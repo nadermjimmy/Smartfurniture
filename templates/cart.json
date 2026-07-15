@@ -48,7 +48,7 @@
       "settings": {}
     },
     "cross-sell": {
-      "type": "featured-collection",
+      "type": "featured-collections",
       "settings": {
         "color_scheme": "scheme-1",
         "title": "Complete your room",
