@@ -9,7 +9,7 @@
 {%- enddoc -%}
 
 {%- liquid
-  assign badge_types = types | default: 'custom, sold_out, discount' | split: ','
+  assign badge_types = types | default: 'custom, express, sold_out, discount' | split: ','
   assign variant = variant | default: product.selected_or_first_available_variant
 -%}
 
@@ -24,6 +24,14 @@
         {%- for custom_badge in custom_badges -%}
           <span class="badge badge--custom badge--{{ custom_badge | handle }}">{{ custom_badge }}</span>
         {%- endfor -%}
+
+      {%- when 'express' -%}
+        {%- if product.tags contains 'ready-in-48h' -%}
+          <span class="badge badge--express">
+            <span class="badge__dot badge__dot--green" aria-hidden="true"></span>
+            {{ 'product.general.ready_in_48h' | t | default: 'Ready in 48h' }}
+          </span>
+        {%- endif -%}
 
       {%- when 'sold_out' -%}
         {%- if settings.show_sold_out_badge and variant.available == false -%}

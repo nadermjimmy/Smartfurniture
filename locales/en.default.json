@@ -107,7 +107,10 @@
         "other": "{{ count }} colors available"
       },
       "installment_from": "or",
-      "installment_per_month": "/ mo"
+      "installment_per_month": "/ mo",
+      "ready_in_48h": "Ready in 48h",
+      "delivered_in_48h": "Delivered & assembled in 48h",
+      "only_x_left": "Only {{ count }} left in stock"
     },
     "gallery": {
       "close": "Close gallery",
