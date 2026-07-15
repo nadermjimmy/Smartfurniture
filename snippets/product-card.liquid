@@ -156,6 +156,10 @@
           {%- render 'vendor' with product.vendor, class: vendor_class -%}
         {%- endif -%}
 
+        {%- if product.type != blank -%}
+          <p class="product-card__category smallcaps text-subdued">{{ product.type }}</p>
+        {%- endif -%}
+
         {%- if show_title or show_prices -%}
           <div class="v-stack justify-items-center gap-1">
             {%- if show_title -%}
@@ -173,6 +177,19 @@
 
             {%- if show_prices -%}
               {%- render 'price-list', product: product, context: 'card' -%}
+
+              {%- liquid
+                assign installment_months = product.metafields.custom.installment_months.value | default: 12
+                assign installment_price = product.price | divided_by: installment_months
+              -%}
+              {%- if product.price > 0 -%}
+                <p class="product-card__installment">
+                  <span class="product-card__installment-arrow" aria-hidden="true">&#x2794;</span>
+                  {{ 'product.general.installment_from' | t | default: 'or' }}
+                  {{ installment_price | money }}
+                  {{ 'product.general.installment_per_month' | t | default: '/ mo' }}
+                </p>
+              {%- endif -%}
             {%- endif -%}
           </div>
         {%- endif -%}

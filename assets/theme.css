@@ -8368,3 +8368,33 @@ ul {
   display: -webkit-box;
   overflow: hidden;
 }
+
+/* Smart Furniture — Product card enhancements */
+.product-card {
+  border: 0.8px solid rgb(var(--border-color));
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.product-card__figure {
+  background: rgb(var(--background));
+}
+
+.product-card__category {
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.product-card__installment {
+  font-size: var(--text-xs);
+  color: #EE7857;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.product-card__installment-arrow {
+  font-size: 0.75rem;
+  line-height: 1;
+}
