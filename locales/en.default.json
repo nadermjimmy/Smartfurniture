@@ -100,22 +100,12 @@
       "view_in_space": "View in your space",
       "taxes_included": "Tax included.",
       "taxes_excluded": "Tax excluded.",
-      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Shipping calculated</a> at checkout",
+      "shipping_policy_html": "<a href=\"{{ link }}\" class=\"link\">Shipping calculated<\/a> at checkout",
       "size_chart": "Size chart",
       "available_colors_count": {
         "one": "{{ count }} color available",
         "other": "{{ count }} colors available"
-      },
-      "installment_from": "or",
-      "installment_per_month": "/ mo",
-      "installment_provider": "with Valu",
-      "pay_with_installments": "PAY WITH INSTALLMENTS",
-      "customize_your_set": "Customize your set",
-      "set_subtitle": "Add or remove pieces — price updates automatically",
-      "your_set_total": "YOUR SET TOTAL",
-      "ready_in_48h": "Ready in 48h",
-      "delivered_in_48h": "Delivered & assembled in 48h",
-      "only_x_left": "Only {{ count }} left in stock"
+      }
     },
     "gallery": {
       "close": "Close gallery",
@@ -372,12 +362,7 @@
       "view_cart": "View cart",
       "update_cart": "Update cart",
       "checkout": "Checkout",
-      "we_accept": "We accept",
-      "delivery": "Delivery",
-      "assembly": "Assembly",
-      "free": "Free",
-      "installment_from": "From",
-      "installment_suffix": "/mo · 0% interest"
+      "we_accept": "We accept"
     },
     "order": {
       "product": "Product",

@@ -6142,37 +6142,6 @@ import { Delegate as Delegate11 } from "vendor";
     table.outerHTML = '<div class="table-scroller">' + table.outerHTML + "</div>";
   });
 })();
-if (!window.customElements.get("set-configurator")) {
-  window.customElements.define("set-configurator", class SetConfigurator extends HTMLElement {
-    connectedCallback() {
-      this._updateTotal();
-      this.addEventListener("click", (e) => {
-        const btn = e.target.closest("[data-action]");
-        if (!btn) return;
-        const item = btn.closest(".set-configurator__item");
-        const qtyEl = item.querySelector("[data-qty]");
-        let qty = parseInt(qtyEl.textContent, 10) || 0;
-        if (btn.dataset.action === "increase") qty++;
-        else if (btn.dataset.action === "decrease" && qty > 0) qty--;
-        qtyEl.textContent = qty;
-        this._updateTotal();
-      });
-    }
-    _updateTotal() {
-      let total = 0;
-      this.querySelectorAll(".set-configurator__item").forEach((item) => {
-        const price = parseInt(item.dataset.itemPrice, 10) || 0;
-        const qty = parseInt(item.querySelector("[data-qty]").textContent, 10) || 0;
-        total += price * qty;
-      });
-      const totalEl = this.querySelector("[data-set-total]");
-      if (totalEl) {
-        totalEl.textContent = (total === 0) ? "—" : window.themeVariables.settings.moneyFormat.replace(/\{\{\s*amount\s*\}\}/, (total / 100).toLocaleString());
-      }
-    }
-  });
-}
-var SetConfigurator = customElements.get("set-configurator");
 export {
   AccordionDisclosure,
   AccountLogin,
@@ -6258,7 +6227,6 @@ export {
   ScrollCarousel,
   ShareButton,
   ShippingEstimator,
-  SetConfigurator,
   ShopTheLookDesktopCarousel,
   ShopTheLookMobileCarousel,
   ShopTheLookPopover,

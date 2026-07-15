@@ -1,5 +1,39 @@
 # Smart Furniture — Development Reference
 
+## ⚠️ WORKING AGREEMENT — READ FIRST (non-negotiable)
+
+This is a **paid Prestige theme** ($400, licensed). The merchant owns its defaults and its
+live content. This branch (`claude/figma-connection-*`) **will be published as the live theme**,
+so every file here is production-facing.
+
+### Never edit these files unless changing them IS the explicit, stated goal:
+
+- `config/settings_data.json` — live merchant theme settings & color schemes
+- `config/settings_schema.json` — theme settings definitions
+- `sections/*-group.json` (`header-group.json`, `footer-group.json`, `overlay-group.json`) — live section-group content
+- `templates/**/*.json` — live page content/layout the merchant configures in the theme editor
+
+These JSON files hold **live merchant content**. They are the #1 source of merge conflicts
+and accidental content wipes in the Shopify GitHub integration. Leave them alone. If a task
+genuinely requires a JSON change, call it out explicitly and confirm before touching it.
+
+### Do your work in code, not content:
+
+- Styling → `assets/theme.css` or scoped `{% stylesheet %}` blocks
+- Behavior → `assets/theme.js` (respect the importmap + custom-element guard pattern)
+- Markup/logic → `.liquid` section/snippet/block files
+- Copy → `locales/*.json` (locale files are code-side, safe to edit)
+
+### Process rules (these were violated before — do not repeat):
+
+1. **Verify end-to-end before claiming done.** Before saying a feature works, confirm every
+   referenced section type, setting id, and block type actually exists in that section's
+   `{% schema %}`. Use the Shopify Liquid skill / MCP to validate — do not assume.
+2. **Prefer native Prestige sections & settings** over custom code. Only write custom code
+   when Prestige has no native equivalent, and keep it minimal.
+3. **No large custom codebases.** Maintain mobile + web responsiveness and fast load times.
+4. **When in doubt, ask** — do not guess at merchant intent or theme internals.
+
 ## Stack
 
 - **Shopify Theme**: Prestige v11.4.0 by Maestrooo (Online Store 2.0, JSON templates)

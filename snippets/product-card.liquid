@@ -156,10 +156,6 @@
           {%- render 'vendor' with product.vendor, class: vendor_class -%}
         {%- endif -%}
 
-        {%- if product.type != blank -%}
-          <p class="product-card__category smallcaps text-subdued">{{ product.type }}</p>
-        {%- endif -%}
-
         {%- if show_title or show_prices -%}
           <div class="v-stack justify-items-center gap-1">
             {%- if show_title -%}
@@ -177,32 +173,6 @@
 
             {%- if show_prices -%}
               {%- render 'price-list', product: product, context: 'card' -%}
-
-              {%- liquid
-                assign installment_months = product.metafields.custom.installment_months.value | default: 12
-                assign installment_price = product.price | divided_by: installment_months
-              -%}
-              {%- if product.price > 0 -%}
-                <p class="product-card__installment">
-                  <span class="product-card__installment-arrow" aria-hidden="true">&#x2794;</span>
-                  {{ 'product.general.installment_from' | t | default: 'or' }}
-                  {{ installment_price | money }}
-                  {{ 'product.general.installment_per_month' | t | default: '/ mo' }}
-                </p>
-              {%- endif -%}
-            {%- endif -%}
-
-            {%- if variant.inventory_management and variant.inventory_quantity <= 5 and variant.inventory_quantity > 0 -%}
-              <p class="product-card__stock-warning">
-                {{ 'product.general.only_x_left' | t: count: variant.inventory_quantity | default: 'Only ' | append: variant.inventory_quantity | append: ' left in stock' }}
-              </p>
-            {%- endif -%}
-
-            {%- if product.tags contains 'ready-in-48h' -%}
-              <p class="product-card__delivery-info">
-                <span class="badge__dot badge__dot--green" aria-hidden="true"></span>
-                {{ 'product.general.delivered_in_48h' | t | default: 'Delivered & assembled in 48h' }}
-              </p>
             {%- endif -%}
           </div>
         {%- endif -%}
