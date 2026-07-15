@@ -372,7 +372,12 @@
       "view_cart": "View cart",
       "update_cart": "Update cart",
       "checkout": "Checkout",
-      "we_accept": "We accept"
+      "we_accept": "We accept",
+      "delivery": "Delivery",
+      "assembly": "Assembly",
+      "free": "Free",
+      "installment_from": "From",
+      "installment_suffix": "/mo · 0% interest"
     },
     "order": {
       "product": "Product",

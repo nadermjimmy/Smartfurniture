@@ -8626,3 +8626,25 @@ ul {
   padding-block-start: 1rem;
   border-block-start: 1px solid rgb(var(--border-color));
 }
+
+/* ---- Cart installment callout ---- */
+.cart-installment-callout {
+  padding-block: 0.5rem;
+  border-block-start: 1px dashed rgb(var(--border-color));
+  margin-block-start: 0.25rem;
+}
+
+.cart-installment-callout span {
+  color: #EE7857;
+  font-weight: 600;
+}
+
+/* ---- Cart checkout button navy ---- */
+.shopify-section--main-cart .button--primary {
+  background: #001D43;
+  color: #ffffff;
+}
+
+.shopify-section--main-cart .button--primary:hover {
+  background: #001128;
+}

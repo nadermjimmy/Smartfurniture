@@ -141,8 +141,23 @@
                 {%- endif -%}
 
                 <div class="h-stack justify-start gap-2">
+                  <span class="text-subdued">{{ 'cart.general.delivery' | t }}:</span>
+                  <span class="text-subdued" style="color: #16a34a; font-weight: 600;">{{ 'cart.general.free' | t }}</span>
+                </div>
+
+                <div class="h-stack justify-start gap-2">
+                  <span class="text-subdued">{{ 'cart.general.assembly' | t }}:</span>
+                  <span class="text-subdued" style="color: #16a34a; font-weight: 600;">{{ 'cart.general.free' | t }}</span>
+                </div>
+
+                <div class="h-stack justify-start gap-2">
                   <span class="text-lg">{{ 'cart.general.total' | t }}:</span>
                   <span class="text-lg">{{- cart.total_price | money_with_currency -}}</span>
+                </div>
+
+                {%- assign cart_monthly = cart.total_price | divided_by: 12 -%}
+                <div class="cart-installment-callout">
+                  <span class="text-sm text-subdued">{{ 'cart.general.installment_from' | t }} ~{{ cart_monthly | money }} {{ 'cart.general.installment_suffix' | t }}</span>
                 </div>
 
                 {%- if section.settings.show_shipping_text -%}
