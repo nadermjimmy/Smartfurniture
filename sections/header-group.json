@@ -11,16 +11,42 @@
   "type": "header",
   "name": "Header group",
   "sections": {
-    "countdown-timer": {
-      "type": "countdown-condensed",
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "msg-1": {
+          "type": "message",
+          "settings": {
+            "text": "<strong>48-Hour Delivery</strong> on select items"
+          }
+        },
+        "msg-2": {
+          "type": "message",
+          "settings": {
+            "text": "<strong>Free assembly</strong> included with every order"
+          }
+        },
+        "msg-3": {
+          "type": "message",
+          "settings": {
+            "text": "Call <strong>19641</strong> for inquiries"
+          }
+        },
+        "msg-4": {
+          "type": "message",
+          "settings": {
+            "text": "<strong>30+ Branches</strong> across Egypt"
+          }
+        }
+      },
+      "block_order": ["msg-1", "msg-2", "msg-3", "msg-4"],
       "settings": {
-        "color_scheme": "schema-3",
-        "content": "super Sale Up to 40% off",
-        "link_text": "shop now",
-        "link_url": "shopify://collections/all",
-        "expiration_date": "2025-11-25",
-        "expiration_behavior": "leave",
-        "desktop_justification": "space-between"
+        "color_scheme": "scheme-7",
+        "enable_sticky": false,
+        "autoplay": true,
+        "cycle_speed": 4,
+        "desktop_font_size": 11,
+        "mobile_font_size": 10
       }
     },
     "header": {
@@ -53,7 +79,7 @@
     }
   },
   "order": [
-    "countdown-timer",
+    "announcement-bar",
     "header"
   ]
 }

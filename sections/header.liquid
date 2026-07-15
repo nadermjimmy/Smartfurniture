@@ -138,7 +138,18 @@
                 endfor
               %}
 
-              <li class="header__primary-nav-item">
+              {%- liquid
+                assign nav_item_class = 'header__primary-nav-item'
+                assign nav_link_extra = ''
+
+                if link_title_downcase == 'last chance'
+                  assign nav_item_class = nav_item_class | append: ' header__nav-item--last-chance'
+                elsif link_title_downcase == 'installments'
+                  assign nav_item_class = nav_item_class | append: ' header__nav-item--installments'
+                endif
+              -%}
+
+              <li class="{{ nav_item_class }}">
                 {%- if link.levels == 0 and mega_menu_block == '' -%}
                   <a
                     href="{{ link.url }}"
@@ -148,12 +159,18 @@
                       aria-current="page"
                     {% endif %}
                   >
+                    {%- if link_title_downcase == 'last chance' -%}
+                      <span class="header__nav-dot header__nav-dot--red" aria-hidden="true"></span>
+                    {%- endif -%}
                     {{- link.title -}}
                   </a>
                 {%- else -%}
                   {%- capture disclosure_content -%}
                     <details class="header__menu-disclosure">
                       <summary data-follow-link="{{ link.url }}" {% if section.settings.menu_text_font == 'heading' %}class="h6"{% endif %} data-title="{{ link.title | escape }}">
+                        {%- if link_title_downcase == 'last chance' -%}
+                          <span class="header__nav-dot header__nav-dot--red" aria-hidden="true"></span>
+                        {%- endif -%}
                         {{- link.title -}}
                       </summary>
 

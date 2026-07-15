@@ -8434,3 +8434,44 @@ ul {
 .badge__dot--green {
   background: #05DF72;
 }
+
+/* Smart Furniture — Header nav enhancements */
+.header__nav-item--last-chance a,
+.header__nav-item--last-chance summary {
+  color: #D10000 !important;
+  font-weight: 700;
+}
+
+.header__nav-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  margin-inline-end: 0.25rem;
+  vertical-align: middle;
+}
+
+.header__nav-dot--red {
+  background: #D10000;
+}
+
+.header__nav-item--installments > a,
+.header__nav-item--installments > dropdown-menu-disclosure > details > summary {
+  background: #EE7857;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.header__nav-item--installments > a:hover,
+.header__nav-item--installments > dropdown-menu-disclosure > details > summary:hover {
+  background: #e06640;
+}
+
+/* Smart Furniture — Announcement bar peach highlights */
+.announcement-bar strong {
+  color: #EE7857;
+  font-weight: 700;
+}
