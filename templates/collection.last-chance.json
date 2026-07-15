@@ -1,0 +1,80 @@
+{
+  "sections": {
+    "collection-banner": {
+      "type": "collection-banner",
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image_size": "sm",
+        "allow_transparent_header": true,
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "urgency-bar": {
+      "type": "scrolling-content",
+      "blocks": {
+        "text-1": {
+          "type": "text",
+          "settings": {
+            "text": "⏰ Limited stock — prices won't last"
+          }
+        }
+      },
+      "block_order": ["text-1"],
+      "settings": {
+        "separate_section_with_border": false,
+        "scrolling_speed": 0.3,
+        "scroll_direction": "left",
+        "text_font": "heading",
+        "text_font_size_mobile": 14,
+        "text_font_size_desktop": 16,
+        "section_vertical_spacing_mobile": 10,
+        "section_vertical_spacing_desktop": 12,
+        "item_horizontal_spacing_mobile": 40,
+        "item_horizontal_spacing_desktop": 80,
+        "background": "#D10000",
+        "text_color": "#ffffff"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "color_scheme": "scheme-1",
+        "products_per_page": 24,
+        "products_per_row_mobile": "2",
+        "products_size_desktop": "medium",
+        "show_grid_mode_selector": true
+      }
+    },
+    "trust-badges": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon-1": {
+          "type": "item",
+          "settings": {
+            "title": "Factory-direct pricing"
+          }
+        },
+        "icon-2": {
+          "type": "item",
+          "settings": {
+            "title": "Free delivery"
+          }
+        },
+        "icon-3": {
+          "type": "item",
+          "settings": {
+            "title": "5-year warranty"
+          }
+        }
+      },
+      "block_order": ["icon-1", "icon-2", "icon-3"],
+      "settings": {}
+    }
+  },
+  "order": ["collection-banner", "urgency-bar", "main", "trust-badges"]
+}
