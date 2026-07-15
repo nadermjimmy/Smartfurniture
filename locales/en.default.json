@@ -108,6 +108,8 @@
       },
       "installment_from": "or",
       "installment_per_month": "/ mo",
+      "installment_provider": "with Valu",
+      "pay_with_installments": "PAY WITH INSTALLMENTS",
       "ready_in_48h": "Ready in 48h",
       "delivered_in_48h": "Delivered & assembled in 48h",
       "only_x_left": "Only {{ count }} left in stock"

@@ -8502,3 +8502,28 @@ ul {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
+/* Smart Furniture — PDP installment callout */
+.pdp-installment-callout {
+  font-size: var(--text-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pdp-installment-callout__price {
+  color: rgb(var(--text-color));
+}
+
+.pdp-installment-callout__link {
+  color: #EE7857;
+  font-weight: 700;
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pdp-installment-callout__link:hover {
+  text-decoration: underline;
+}

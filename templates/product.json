@@ -1,1 +1,165 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"vendor","settings":{}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"payment_terms":{"type":"payment_terms","settings":{}},"separator":{"type":"separator","settings":{}},"description":{"type":"description","settings":{}},"variant_picker":{"type":"variant_picker","settings":{}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{}},"pickup_availability":{"type":"pickup_availability","settings":{}},"complementary_products":{"type":"complementary_products","settings":{}}},"block_order":["vendor","title","price","payment_terms","separator","description","variant_picker","quantity_selector","buy_buttons","complementary_products"],"settings":{}},"related-products":{"type":"related-products","settings":{}}},"order":["main","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h1"
+          }
+        },
+        "badges": {
+          "type": "badges",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "installment_callout": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- liquid\n  assign installment_months = product.metafields.custom.installment_months.value | default: 12\n  assign installment_price = product.price | divided_by: installment_months\n-%}\n{%- if product.price > 0 -%}\n<p class=\"pdp-installment-callout\">\n  <span class=\"pdp-installment-callout__price\">{{ 'product.general.installment_from' | t | default: 'From' }} {{ installment_price | money }}/{{ 'product.general.installment_per_month' | t | default: 'mo' }} {{ 'product.general.installment_provider' | t | default: 'with Valu' }}</span>\n  <a href=\"/pages/installments\" class=\"pdp-installment-callout__link\">{{ 'product.general.pay_with_installments' | t | default: 'PAY WITH INSTALLMENTS' }}</a>\n</p>\n{%- endif -%}"
+          }
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "selector_style": "block",
+            "swatch_selector_style": "swatch"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "atc_button_background": "#001D43",
+            "atc_button_text_color": "#ffffff"
+          }
+        },
+        "trust_delivery": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "Free Delivery",
+            "icon": "picto-box",
+            "icon_width": 24,
+            "background": "",
+            "text_color": "",
+            "border_color": "#d1d5db"
+          }
+        },
+        "trust_assembly": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "Free Assembly",
+            "icon": "picto-warranty",
+            "icon_width": 24,
+            "background": "",
+            "text_color": "",
+            "border_color": "#d1d5db"
+          }
+        },
+        "trust_warranty": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "5-Year Warranty",
+            "icon": "picto-shield",
+            "icon_width": 24,
+            "background": "",
+            "text_color": "",
+            "border_color": "#d1d5db"
+          }
+        },
+        "trust_made": {
+          "type": "feature_with_icon",
+          "settings": {
+            "text": "Made by us",
+            "icon": "picto-factory",
+            "icon_width": 24,
+            "background": "",
+            "text_color": "",
+            "border_color": "#d1d5db"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "collapse_content": true,
+            "show_below_gallery": false
+          }
+        },
+        "accordion_warranty": {
+          "type": "accordion",
+          "settings": {
+            "title": "Warranty",
+            "content": "<p>All Smart Furniture products come with a comprehensive 5-year manufacturer's warranty covering structural defects and craftsmanship issues.</p>",
+            "icon": "picto-shield",
+            "show_below_gallery": false
+          }
+        },
+        "accordion_dimensions": {
+          "type": "accordion",
+          "settings": {
+            "title": "Dimensions",
+            "content": "<p>Detailed dimensions are available on each product variant. Please refer to the specification sheet or contact us for exact measurements.</p>",
+            "icon": "picto-ruler",
+            "show_below_gallery": false
+          }
+        },
+        "accordion_delivery": {
+          "type": "accordion",
+          "settings": {
+            "title": "Delivery",
+            "content": "<p>Free delivery and assembly across Egypt. Standard delivery takes 5-7 business days. Express 48-hour delivery available on select items.</p>",
+            "icon": "picto-box",
+            "show_below_gallery": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "badges",
+        "price",
+        "installment_callout",
+        "separator",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "trust_delivery",
+        "trust_assembly",
+        "trust_warranty",
+        "trust_made",
+        "description",
+        "accordion_warranty",
+        "accordion_dimensions",
+        "accordion_delivery"
+      ],
+      "settings": {
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "mobile_controls": "thumbnails",
+        "enable_image_zoom": true
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "title": "You May also like",
+        "products_count": 4,
+        "show_secondary_image": true,
+        "show_quick_buy": true
+      }
+    }
+  },
+  "order": ["main", "related-products"]
+}
