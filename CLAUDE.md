@@ -159,6 +159,11 @@ First visible image: `loading: nil, fetchpriority: 'high'`. All others: `loading
 2. Use the custom element guard pattern
 3. Dispatch events on `this` for local, `document.documentElement` for global
 4. Access settings only via `window.themeVariables`
+5. Keep minified JS under 16 KB per file — Shopify auto-minifies on request
+6. Never use jQuery, React, Angular, Vue — use native browser APIs only
+7. Always `defer` or `async` script tags — never parser-block rendering
+8. Wrap variables in IIFE or module scope — no global namespace pollution
+9. Use import-on-interaction for non-critical components
 
 ### When Modifying Styles
 
@@ -167,6 +172,31 @@ First visible image: `loading: nil, fetchpriority: 'high'`. All others: `loading
 3. Scope custom CSS with `#shopify-section-{{ section.id }}`
 4. Use the theme's breakpoints (700px, 1000px, 1150px, 1400px)
 5. Typography: reference `--text-h1` through `--text-h6` and `--text-xs` through `--text-xl`
+6. Ensure each CSS file's classes are used only within that file's render tree (enables Shopify auto-subsetting)
+7. Never add external stylesheets — keep all CSS in `assets/theme.css` or section `{% stylesheet %}` tags
+
+### Shopify Performance Rules (from shopify.dev)
+
+1. **Images**: Always use `image_url` + `image_tag` filters — never hardcode img src
+2. **Lazy loading**: `loading: 'lazy'` for below-fold images; omit loading + `fetchpriority: 'high'` for first visible
+3. **Responsive**: Always provide `sizes` and `widths` attributes on `image_tag`
+4. **Preload**: Max 2 resource hints per template via `preload_tag` or `preload` keyword
+5. **Fonts**: Prefer system fonts; use `font_face` filter with `font_display: 'fallback'`
+6. **Liquid perf**: Do complex operations (sort, assign) outside loops, not inside
+7. **Render tag**: Always use `{% render %}` not `{% include %}` — render has proper scoping
+8. **Section limits**: Max 25 sections per JSON template, max 50 blocks per section
+9. **Lighthouse target**: Minimum 60 average across home, product, collection pages
+
+### Accessibility Rules (from shopify.dev)
+
+1. Valid semantic HTML — headings in order (h1→h6), `nav` for navigation, `button` for actions, `a` for links
+2. All `img` elements need `alt` attributes — descriptive for content, empty `alt=""` for decorative
+3. All form fields need labels — `for`, `aria-label`, or floating label pattern
+4. Color contrast: 4.5:1 for small text, 3:1 for large text and icons
+5. Min 44×44px touch targets for primary controls
+6. Support Tab/Shift+Tab, Enter/Space, Esc for keyboard navigation
+7. Use `aria-expanded`, `aria-controls`, `aria-live` for dynamic UI state
+8. Never use `autofocus` or positive `tabindex` values
 
 ### When Working with Figma
 
@@ -184,10 +214,13 @@ First visible image: `loading: nil, fetchpriority: 'high'`. All others: `loading
 
 ## Active Configuration
 
-- **Fonts**: Instrument Sans (headings), Nunito (body)
+- **Fonts**: Avenir Next Bold (headings), Avenir Next Regular (body)
+- **Heading casing**: Normal (not uppercase)
 - **Body text**: 14px desktop
-- **Color schemes**: scheme-1 (gray #efefef), scheme-2 (white), scheme-3 (dark #1c1c1c), scheme-4/5 (transparent overlay)
+- **Color schemes**: scheme-1 (light gray #F9FAFB), scheme-2 (white), scheme-3 (navy #001D43), scheme-4 (beige #F8F2EA), scheme-5 (dark navy #001128)
+- **Accent colors**: Teal #57B4A9 (sale badges), Peach #EE7857 (warnings/CTAs), Green #05DF72 (success), Red #CB000A (errors)
 - **Cart**: Drawer style
-- **Buttons**: 0px border radius (square)
+- **Buttons**: 14px border radius (rounded), heading font family, 2% letter spacing
+- **Inputs**: 14px border radius
 - **Icons**: 1.5px stroke width
 - **Presets available**: Prestige (active), Couture, Vogue, Strass, Signature
