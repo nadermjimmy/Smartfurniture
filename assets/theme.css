@@ -8475,3 +8475,30 @@ ul {
   color: #EE7857;
   font-weight: 700;
 }
+
+/* Smart Furniture — Footer enhancements */
+.shopify-section--footer .footer__aside {
+  background: #001128;
+  color: #ffffff;
+  margin-inline: calc(-1 * var(--container-gutter));
+  padding-inline: var(--container-gutter);
+  padding-block: 1rem;
+  margin-block-end: calc(-1 * var(--section-outer-spacing-block));
+}
+
+.shopify-section--footer .footer__aside * {
+  color: #ffffff;
+}
+
+.shopify-section--footer .footer__aside .payment-methods svg {
+  opacity: 0.7;
+}
+
+.shopify-section--footer .footer__block--text strong {
+  color: #EE7857;
+}
+
+.shopify-section--footer .footer__block--newsletter .h6 {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
