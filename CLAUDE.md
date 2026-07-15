@@ -214,10 +214,10 @@ First visible image: `loading: nil, fetchpriority: 'high'`. All others: `loading
 
 ## Active Configuration
 
-- **Fonts**: Avenir Next Bold (headings), Avenir Next Regular (body)
+- **Fonts**: Figtree Bold (headings), Figtree Regular (body) — Shopify's official replacement for deprecated Avenir Next
 - **Heading casing**: Normal (not uppercase)
 - **Body text**: 14px desktop
-- **Color schemes**: scheme-1 (light gray #F9FAFB), scheme-2 (white), scheme-3 (navy #001D43), scheme-4 (beige #F8F2EA), scheme-5 (dark navy #001128)
+- **Color schemes**: scheme-1 (light gray #F9FAFB), scheme-2 (white), scheme-3 (navy #001D43), scheme-4 (transparent overlay), scheme-5 (transparent overlay), scheme-6 (beige #F8F2EA), scheme-7 (dark navy #001128)
 - **Accent colors**: Teal #57B4A9 (sale badges), Peach #EE7857 (warnings/CTAs), Green #05DF72 (success), Red #CB000A (errors)
 - **Cart**: Drawer style
 - **Buttons**: 14px border radius (rounded), heading font family, 2% letter spacing
