@@ -6,14 +6,14 @@
         "heading-1": {
           "type": "heading",
           "settings": {
-            "text": "Contact & Showrooms",
+            "text": "Join Our Team",
             "heading_tag": "h1"
           }
         },
         "richtext-1": {
           "type": "richtext",
           "settings": {
-            "content": "<p>Visit one of our 30+ showrooms or get in touch</p>"
+            "content": "<p>Build the future of furniture with us</p>"
           }
         }
       },
@@ -31,19 +31,18 @@
     },
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {}
     },
-    "contact-form": {
+    "contact": {
       "type": "contact",
       "settings": {
         "color_scheme": "scheme-1",
-        "subheading": "Get in Touch",
-        "title": "Send us a message",
+        "subheading": "Apply Now",
+        "title": "Send us your CV",
         "heading_style": "h2",
-        "content": "<p>Call us at <strong>19641</strong> or fill in the form below.</p>"
+        "content": "<p>Interested in joining Smart Furniture? Fill in the form below and attach your CV.</p>"
       }
     }
   },
-  "order": ["hero", "main", "contact-form"]
+  "order": ["hero", "main", "contact"]
 }

@@ -1,0 +1,145 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Built in Egypt.\nFor Egypt.",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Egypt's largest furniture manufacturer</p>"
+          }
+        }
+      },
+      "block_order": ["heading-1", "richtext-1"],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image_size": "md",
+        "allow_transparent_header": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 35
+      }
+    },
+    "brand-story": {
+      "type": "image-with-text-block",
+      "blocks": {
+        "subheading-1": {
+          "type": "subheading",
+          "settings": {
+            "text": "Our Story"
+          }
+        },
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Designing, building, and delivering premium furniture since day one",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Smart Furniture is Egypt's largest furniture manufacturer, operating from our 100,000 sq ft factory in 10th of Ramadan City. We design, build, and deliver directly to your home — no middlemen, no markups.</p><p>Every piece is crafted from premium Egyptian hardwood and MDF with a lacquered finish, upholstered in scratch-resistant fabric with reinforced stitching for durability.</p>"
+          }
+        }
+      },
+      "block_order": ["subheading-1", "heading-1", "richtext-1"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "image_size": "md",
+        "content_width": "md"
+      }
+    },
+    "values": {
+      "type": "multi-column",
+      "blocks": {
+        "val-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Factory Direct",
+            "heading_tag": "h4",
+            "content": "<p>No middlemen. We manufacture and deliver directly to you at factory prices.</p>"
+          }
+        },
+        "val-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "5-Year Warranty",
+            "heading_tag": "h4",
+            "content": "<p>Every piece comes with a comprehensive manufacturer's warranty.</p>"
+          }
+        },
+        "val-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "Free Assembly",
+            "heading_tag": "h4",
+            "content": "<p>Professional delivery and assembly included with every order across Egypt.</p>"
+          }
+        },
+        "val-4": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "30+ Showrooms",
+            "heading_tag": "h4",
+            "content": "<p>Visit any of our showrooms across Egypt to experience our furniture in person.</p>"
+          }
+        }
+      },
+      "block_order": ["val-1", "val-2", "val-3", "val-4"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 4,
+        "stack_on_mobile": false,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "md",
+        "title": "Why Smart Furniture",
+        "heading_style": "h2"
+      }
+    },
+    "factory": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "100,000 sq ft factory",
+            "heading_tag": "h2"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>10th of Ramadan City, Egypt</p>"
+          }
+        }
+      },
+      "block_order": ["heading-1", "richtext-1"],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image_size": "md",
+        "reveal_on_scroll": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "brand-story", "values", "factory", "main"]
+}

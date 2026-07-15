@@ -1,0 +1,102 @@
+{
+  "sections": {
+    "hero": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Buy Now, Pay Later",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext-1": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Flexible installment plans to furnish your home</p>"
+          }
+        }
+      },
+      "block_order": ["heading-1", "richtext-1"],
+      "settings": {
+        "color_scheme": "scheme-4",
+        "image_size": "sm",
+        "allow_transparent_header": true,
+        "content_width": "md",
+        "mobile_text_position": "place-self-center text-center",
+        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 35
+      }
+    },
+    "how-it-works": {
+      "type": "multi-column",
+      "blocks": {
+        "step-1": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "1. Choose your furniture",
+            "heading_tag": "h4",
+            "content": "<p>Browse our collections and add items to your cart.</p>"
+          }
+        },
+        "step-2": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "2. Select installment plan",
+            "heading_tag": "h4",
+            "content": "<p>Choose 6, 12, 18, or 24 month plans with Valu at checkout.</p>"
+          }
+        },
+        "step-3": {
+          "type": "image_with_text",
+          "settings": {
+            "title": "3. Enjoy your home",
+            "heading_tag": "h4",
+            "content": "<p>Get free delivery and assembly while paying comfortable monthly installments.</p>"
+          }
+        }
+      },
+      "block_order": ["step-1", "step-2", "step-3"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "columns_per_row": 3,
+        "content_alignment": "center",
+        "text_alignment": "center",
+        "spacing": "md",
+        "title": "How it works",
+        "heading_style": "h2"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "cta": {
+      "type": "rich-text",
+      "blocks": {
+        "heading-1": {
+          "type": "heading",
+          "settings": {
+            "text": "Ready to furnish your home?",
+            "heading_tag": "h2"
+          }
+        },
+        "link-1": {
+          "type": "link",
+          "settings": {
+            "text": "Start Shopping",
+            "url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": ["heading-1", "link-1"],
+      "settings": {
+        "color_scheme": "scheme-1",
+        "content_width": "sm",
+        "text_position": "center"
+      }
+    }
+  },
+  "order": ["hero", "how-it-works", "main", "cta"]
+}
