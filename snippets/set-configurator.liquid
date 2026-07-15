@@ -1,0 +1,50 @@
+{%- doc -%}
+  Renders a "Customize your set" bundle builder on the PDP.
+  Set items are defined via the product metafield `custom.set_items` (product list).
+  Each item shows thumbnail, title, price, and quantity +/- controls.
+  A web component calculates the running total.
+
+  @param {object} product - the current product
+{%- enddoc -%}
+
+{%- assign set_items = product.metafields.custom.set_items.value -%}
+
+{%- if set_items != blank and set_items.size > 0 -%}
+  <set-configurator class="set-configurator" data-currency="{{ cart.currency.symbol }}">
+    <div class="set-configurator__header">
+      <p class="set-configurator__title h6">{{ 'product.general.customize_your_set' | t | default: 'Customize your set' }}</p>
+      <p class="set-configurator__subtitle text-subdued">{{ 'product.general.set_subtitle' | t | default: 'Add or remove pieces — price updates automatically' }}</p>
+    </div>
+
+    <div class="set-configurator__items">
+      {%- for item in set_items -%}
+        {%- assign item_variant = item.selected_or_first_available_variant -%}
+        <div class="set-configurator__item" data-item-price="{{ item_variant.price }}" data-item-id="{{ item_variant.id }}">
+          <div class="set-configurator__item-info">
+            {%- if item.featured_media != blank -%}
+              {{ item.featured_media | image_url: width: 120 | image_tag: loading: 'lazy', sizes: '60px', widths: '60,120', class: 'set-configurator__item-image' }}
+            {%- endif -%}
+            <div class="set-configurator__item-details">
+              <p class="set-configurator__item-name">{{ item.title }}</p>
+              <p class="set-configurator__item-price text-subdued">{{ item_variant.price | money }}</p>
+            </div>
+          </div>
+          <div class="set-configurator__item-qty">
+            <button type="button" class="set-configurator__qty-btn" data-action="decrease" aria-label="{{ 'product.general.decrease_quantity' | t | default: 'Decrease quantity' }}">
+              {%- render 'icon' with 'minus', width: 10 -%}
+            </button>
+            <span class="set-configurator__qty-value" data-qty>{% if forloop.first %}1{% else %}0{% endif %}</span>
+            <button type="button" class="set-configurator__qty-btn" data-action="increase" aria-label="{{ 'product.general.increase_quantity' | t | default: 'Increase quantity' }}">
+              {%- render 'icon' with 'plus', width: 10 -%}
+            </button>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="set-configurator__total">
+      <span class="set-configurator__total-label smallcaps">{{ 'product.general.your_set_total' | t | default: 'YOUR SET TOTAL' }}</span>
+      <span class="set-configurator__total-price h5" data-set-total></span>
+    </div>
+  </set-configurator>
+{%- endif -%}

@@ -8527,3 +8527,102 @@ ul {
 .pdp-installment-callout__link:hover {
   text-decoration: underline;
 }
+
+/* Smart Furniture — Set Configurator */
+.set-configurator {
+  display: block;
+  border: 1px solid rgb(var(--border-color));
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.set-configurator__header {
+  margin-block-end: 1rem;
+}
+
+.set-configurator__subtitle {
+  font-size: var(--text-xs);
+  margin-block-start: 0.25rem;
+}
+
+.set-configurator__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.set-configurator__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-block: 0.5rem;
+  border-block-end: 1px solid rgb(var(--border-color) / 0.3);
+}
+
+.set-configurator__item:last-child {
+  border-block-end: none;
+}
+
+.set-configurator__item-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.set-configurator__item-image {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+.set-configurator__item-name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.set-configurator__item-price {
+  font-size: var(--text-xs);
+}
+
+.set-configurator__item-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.set-configurator__qty-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid rgb(var(--border-color));
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.set-configurator__qty-btn:hover {
+  background: rgb(var(--border-color) / 0.15);
+}
+
+.set-configurator__qty-value {
+  min-width: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.set-configurator__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 1rem;
+  padding-block-start: 1rem;
+  border-block-start: 1px solid rgb(var(--border-color));
+}

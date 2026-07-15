@@ -110,6 +110,9 @@
       "installment_per_month": "/ mo",
       "installment_provider": "with Valu",
       "pay_with_installments": "PAY WITH INSTALLMENTS",
+      "customize_your_set": "Customize your set",
+      "set_subtitle": "Add or remove pieces — price updates automatically",
+      "your_set_total": "YOUR SET TOTAL",
       "ready_in_48h": "Ready in 48h",
       "delivered_in_48h": "Delivered & assembled in 48h",
       "only_x_left": "Only {{ count }} left in stock"

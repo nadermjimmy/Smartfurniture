@@ -36,6 +36,12 @@
             "swatch_selector_style": "swatch"
           }
         },
+        "set_configurator": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{% render 'set-configurator', product: product %}"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
@@ -134,6 +140,7 @@
         "installment_callout",
         "separator",
         "variant_picker",
+        "set_configurator",
         "quantity_selector",
         "buy_buttons",
         "trust_delivery",
